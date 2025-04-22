@@ -44,7 +44,15 @@ def handler(request):
                 tg_url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
                 requests.post(tg_url, data={"chat_id": CHAT_ID, "text": message})
 
-        return {"statusCode": 200, "body": "\n".join(results)}
+        return {
+            "statusCode": 200,
+            "headers": { "Content-Type": "text/plain" },
+            "body": "\n".join(results)
+        }
 
     except Exception as e:
-        return {"statusCode": 500, "body": f"❌ Error: {str(e)}"}
+        return {
+            "statusCode": 500,
+            "headers": { "Content-Type": "text/plain" },
+            "body": f"❌ Error: {str(e)}"
+        }
