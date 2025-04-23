@@ -1,4 +1,3 @@
-# 修复版 - Solana RSI 接口 (Vercel)
+## Vercel RSI API - 测试版
 
-此版本修复了 ta 库兼容性问题，改用手动实现 RSI。
-适用于 Vercel Serverless Function 运行结构。
+仅用于测试 /api/cron 是否正常返回字符串
