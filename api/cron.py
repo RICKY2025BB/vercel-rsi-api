@@ -1,5 +1,5 @@
 def handler(request):
-    return {
+    return {{
         "statusCode": 200,
         "body": "✅ Solana RSI 接口运行正常！"
-    }
+    }}
